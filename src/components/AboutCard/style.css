@@ -1,0 +1,15 @@
+.about-card{
+    text-align: center;
+    margin: 16px 25px;
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.3);
+}
+
+@media (min-width:768px) {
+    .about-card{
+        text-align: center;
+        box-shadow: 0px 2px 10px rgba(0,0,0,0.3);
+    }
+    .about-card:nth-child(odd){
+        padding: 10px;
+    }
+}

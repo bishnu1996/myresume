@@ -1,0 +1,75 @@
+.about-text .about-title{
+    margin: 18px 56px;
+}
+.about-section .about-content{
+    margin:0px 26px 18px ;
+}
+.about-section .about-image{
+    margin: 50px 2px;
+}
+
+@media (min-width:768px) {
+    .about-section{
+        display: flex;
+    }
+    .about-section .about-image, .about-text{
+        flex: 1;
+    }
+    .about-section .about-text,
+    .about-section .about-title,
+    .about-section .about-content{
+        text-align: start;
+        margin: 0;
+    }
+    .about-section .about-title{
+        margin: 18px 0px;
+    }
+    .about-section .about-text{
+        margin: 120px 40px 84px 2px;
+    }
+    .about-text .about-button{
+        margin-top: 25px;
+    }
+    .about-section .about-poster-image{
+        object-fit:contain;
+        padding: 0px 7px 0px 16px;
+    }
+    .about-flex{
+        display: flex;
+        padding: 96px 40px;
+       }
+}
+
+@media (min-width:1024px) {
+    .about-section{
+        display: flex;
+    }
+    .about-section .about-image, .about-text{
+        flex: 1;
+    }
+    .about-section{
+        padding: 20px 134px;
+    }
+    .about-section .about-text,
+    .about-section .about-title,
+    .about-section .about-content{
+        text-align: start;
+        margin: 0;
+    }
+    .about-section .about-title{
+        margin: 18px 0px;
+    }
+    /* .about-section .about-text{
+        padding: 120px 135px 0px 0px;
+    } */
+    .about-button{
+        margin-top: 25px;
+    }
+    .about-section .about-image .about-poster-image{
+        object-fit:contain;
+    }
+   .about-flex{
+    display: flex;
+    padding: 60px 134px;
+   }
+}

@@ -1,0 +1,19 @@
+.clients-img{
+    display: flex;
+    overflow-x: auto;
+    justify-content: space-around;
+}
+.feed-head{
+    margin: 18px 55px;
+}
+
+@media (min-width:768px) {
+    .feed-head{
+        margin: 18px 201px;
+    }
+}
+@media (min-width:1024px) {
+    .feed-head{
+        margin: 18px 490px;
+    }
+}

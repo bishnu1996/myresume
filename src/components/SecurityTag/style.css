@@ -1,0 +1,38 @@
+.security{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 16px 16px;
+}
+.secure-img{
+    width: 67px;
+    height:53px;
+    object-fit: fill;
+}
+
+@media (min-width:768px) {
+    .security{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 40px 40px;
+    }
+    .secure-img{
+        width: 140px;
+        height:109px;
+        object-fit: fill;
+    }
+}
+@media (min-width:1024px) {
+    .security{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 40px 134px;
+    }
+    .secure-img{
+        width: 140px;
+        height:109px;
+        object-fit: fill;
+    }
+}

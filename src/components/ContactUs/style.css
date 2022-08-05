@@ -1,0 +1,31 @@
+.contact-title{
+    margin-top: 50px;
+}
+.contact-subtitle{
+    margin: 18px 70px;
+}
+
+@media (min-width:768px) {
+    .contact-box{
+        display: flex;
+        justify-content: space-around;
+    }
+    .contact-subtitle{
+        margin: 18px 238px 60px 238px;
+    }
+    .contactus{
+        padding: 60px 40px;
+    }
+}
+@media (min-width:1024px) {
+    .contact-box{
+        display: flex;
+        justify-content: space-around;
+    }
+    .contact-subtitle{
+        margin: 25px 300px 60px;
+    }
+    .contactus{
+        padding: 60px 134px;
+    }
+}

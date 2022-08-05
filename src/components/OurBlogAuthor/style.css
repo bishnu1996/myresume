@@ -1,0 +1,36 @@
+.work-image .work-img{
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+.author-image .auth-img{
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+.author-container .graphic-design{
+    display: flex;
+}
+.author-container .author-details{
+    display: flex;
+}
+
+.author-container{
+    height: auto;
+    width: 296px;
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.3);
+    margin: 18px 16px;
+}
+.author-text .content{
+    margin: 6px 10px 15px 18px;
+}
+.author-text .domain{
+    margin-left: 18px;
+}
+.author-details .author-detls{
+    margin-left: 20px;
+}
+.author-container{
+    padding: 20px;
+}
+

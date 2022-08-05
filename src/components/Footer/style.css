@@ -1,0 +1,54 @@
+.footer{
+    padding: 16px 16px;
+}
+.degiency{
+    margin:50px 0px 0px 0px;
+}
+.company{
+    margin: 50px 20px;
+}
+.services{
+    margin: 50px 20px;
+}
+.newsletter{
+    margin: 50px 20px;
+} 
+.footer-main{
+    margin-bottom: 18px;
+}
+.footer-child{
+    margin-bottom: 10px;
+}
+.inputimg{
+    width: 100%;
+    padding: 15px;
+    position: relative;
+    outline: none;
+}
+.input-box-img{
+    background-color: orangered;
+    position: absolute;
+    right: 15px;
+    padding: 13px;
+}
+.down-img{
+    height: 20px;
+    width: 100%;
+    object-fit: contain;
+}
+@media (min-width:768px) {
+    .footer{
+        display: flex;
+    }
+    .footer .degiency, .company,.services,.newsletter{
+        flex:1;
+    }
+    .downfooter {
+        display: flex;
+        padding: 16px;
+
+    }
+    .downfooter .downfooter-text,.downfooter-img{
+        flex: 1;
+    }
+}

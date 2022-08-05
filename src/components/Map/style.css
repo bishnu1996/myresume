@@ -1,0 +1,13 @@
+.map{
+    margin: 16px 16px;
+}
+@media (min-width:768px) {
+    .map{
+        margin: 40px 40px;
+    }
+}
+@media (min-width:1024px) {
+    .map{
+        margin: 40px 134px;
+    }
+}

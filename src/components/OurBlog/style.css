@@ -1,0 +1,22 @@
+.ourblog .blog-author{
+    display: flex;
+    overflow-x: auto;
+    justify-content: space-around;
+}
+.ourblog-about .blog-subtitle{
+    padding: 6px 10px 15px 18px;
+}
+.ourblog-about .blog-subtitle{
+    margin: 18px 35px;
+}
+
+@media (min-width:768px) {
+   .ourblog-about .blog-subtitle{
+        margin: 18px 168px;
+    }  
+}
+@media (min-width:1024px) {
+   .ourblog-about .blog-subtitle{
+        margin: 25px 450px 60px 450px;
+    }  
+}

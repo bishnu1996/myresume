@@ -1,0 +1,18 @@
+.people-card:not(:first-child){
+    margin-left: 40px;
+}
+.team-member .section-description{
+    margin: 18px 80px;
+}
+.people-text .title{
+    font-size: 30px;
+    font-weight: 100;
+}
+.people-text .designation{
+    font: 30px;
+    font-weight: 200;
+}
+
+@media (min-width:768px) {
+    
+}

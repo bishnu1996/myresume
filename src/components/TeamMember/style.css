@@ -1,0 +1,37 @@
+.team-member .section-title{
+    font-size: 20px;
+    font-weight: 100;
+    font-style: normal;
+    font-display:initial;
+}
+.team-member .card-holder{
+    display: flex;
+    overflow-x: auto;
+}
+
+@media (min-width:768px) {
+    .team-member {
+        padding: 60px 40px;
+    }
+    .team-member .card-holder{
+        display: flex;
+        justify-content:space-between;
+
+    }
+    .team-member .section-description span{
+        display: block;
+    }
+}
+@media (min-width:1024px) {
+    .team-member {
+        padding: 60px 134px;
+    }
+    .team-member .card-holder{
+        display: flex;
+        justify-content:space-between;
+
+    }
+    .team-member .section-description span{
+        display: block;
+    }
+}

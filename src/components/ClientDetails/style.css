@@ -1,0 +1,58 @@
+.client-text{
+    height: 177px;
+    width: 266px;
+    color: white;
+    font-size: 30px;
+    padding: 30px;
+    margin: 40px;
+    /* position: relative; */
+}
+.client-details{
+    position: relative;
+}
+.profile{
+    position: absolute;
+    left: 20px;
+    top: 50px;
+}
+.client-domain{
+    margin: 18px 0px 25px 0px;
+}
+@media (min-width:768px) {
+    .client-text{
+        height: 214px;
+        width: 292px;
+        color: white;
+        font-size: 30px;
+        padding: 30px;
+        margin: 40px;
+        /* position: relative; */
+    }
+    .client-details{
+        position: relative;
+    }
+    .profile{
+        position: absolute;
+        left: 20px;
+        top: 50px;
+    }
+}
+@media (min-width:1024px) {
+    .client-text{
+        height: 250px;
+        width: 470px;
+        color: white;
+        font-size: 30px;
+        padding: 30px;
+        margin: 40px;
+        /* position: relative; */
+    }
+    .client-details{
+        position: relative;
+    }
+    .profile{
+        position: absolute;
+        left: 20px;
+        top: 50px;
+    }
+}
