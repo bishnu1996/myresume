@@ -13,7 +13,7 @@ export const registerUser = (payload) => {
       type: 'success',
       code: 200,
       message: "Registration successfull",
-      error: true,
+      error: false,
     },
     data: {
       ...USER_DATA,

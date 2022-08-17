@@ -2,11 +2,9 @@ import React from "react";
 import { Formik } from "formik";
 import { registerUser } from "../../Apis";
 import styles from "./style.module.css";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { setStorageData,USER_DATA } from "../../services/storage";
+import { toastSuccess,toastError } from "../../services/toastify";
 const Register = () => {
-  const success = (msg) => toast.success(msg);
-  const failed = (msg) => toast.error(msg);
   const initialValues = {
     email: "",
     password: "",
@@ -41,13 +39,15 @@ const Register = () => {
   const onSubmit = async (values, { setSubmitting }) => {
     console.log("hello registered");
     const response = await registerUser(values);
-    console.log("response", response);
+    // console.log("response", response);
+    // console.log(USER_DATA,response);
     if (!response.status.error) {
-      // alert(response.status.message);
-      success("Register successfully");
+      console.log(USER_DATA,response.status.message);
+      toastSuccess(response.status.message);
+      setStorageData(USER_DATA, response.data);
+      // console.log(USER_DATA,response.data);
     } else {
-      // alert("registration failled");
-      failed("Register failled");
+      toastError(response.status.message);
     }
   };
   return (
@@ -59,19 +59,6 @@ const Register = () => {
       >
         {myForm}
       </Formik>
-      <div>
-        <ToastContainer
-          position="top-center"
-          autoClose={5000}
-          hideProgressBar={false}
-          newestOnTop={false}
-          closeOnClick
-          rtl={false}
-          pauseOnFocusLoss
-          draggable
-          pauseOnHover
-        />
-      </div>
     </div>
   );
 };
