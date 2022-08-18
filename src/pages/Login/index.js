@@ -1,9 +1,17 @@
 import styles from './style.module.css';
 import React from "react";
 import { Formik } from "formik";
-import { registerUser } from "../../Apis";
-const Login = () => {
+import { loginUser } from "../../Apis";
+import { toastSuccess,toastError } from '../../services/toastify' 
+import { USER_DATA } from '../../services/storage';
+import { useNavigate } from "react-router-dom";
+import { setStorageData } from '../../services/storage';
 
+const Login = () => {
+  const navigate = useNavigate();
+  const gotoHome = () =>{
+    navigate({pathname:'/'})
+  }
     const initialValues = {
         email: "",
         password: "",
@@ -24,14 +32,17 @@ const Login = () => {
         return errors;
       };
       const onSubmit = async (values, { setSubmitting }) => {
-        console.log("hello registered");
-        const response = await registerUser(values);
+        const response = await loginUser(values);
+        console.log('login success',values);
         console.log("response", response);
         if (!response.status.error) {
-          alert(response.status.message);
+          setStorageData(USER_DATA,response.data);
+          toastSuccess(response.status.message);
+          gotoHome();
         } else {
-          alert("registration failled");
+          toastError(response.status.message);
         }
+        setSubmitting(false);
       };
       return (
         <div>

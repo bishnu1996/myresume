@@ -1,6 +1,7 @@
 import "./style.css";
 import Typography from "../Typography";
 import AppImage from '../AppImage';
+import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <>
@@ -85,7 +86,7 @@ const Footer = () => {
           </Typography>
         </div>
         <div className="downfooter-img">
-          <AppImage src={`${process.env.PUBLIC_URL}/assets/svgs/Vector.svg`} className="down-img"/>
+         <Link to='/'><AppImage src={`${process.env.PUBLIC_URL}/assets/svgs/Vector.svg`} className="down-img"/></Link> 
         </div>
       </div>
     </>

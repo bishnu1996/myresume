@@ -1,5 +1,6 @@
 import "./style.css";
 import Typography from "../Typography";
+import { Link } from "react-router-dom";
 
 const DesktopNavbar = (props) => {
   const getClassNames = () =>
@@ -7,33 +8,34 @@ const DesktopNavbar = (props) => {
   return (
     <nav className={getClassNames()}>
       <ul>
-        <li >
+        <li>
           <Typography type="H5" className="menu-font text-black">
-            Home
+            <Link to="/" className="nav-link">Home</Link>
           </Typography>
         </li>
         <li>
           <Typography type="H5" className="menu-font text-black">
-            About Us
+            <Link to="about-us" className="nav-link">About Us</Link>
           </Typography>
         </li>
         <li>
           <Typography type="H5" className="menu-font text-black">
-            Our Work
-          </Typography>
-        </li>
-        <li>
-          <Typography type="H5" className="menu-font text-black">Clients</Typography>
-          
-        </li>
-        <li>
-          <Typography type="H5" className="menu-font text-black">
-            Our Blogs
+            <Link to="our-work" className="nav-link">Our Work</Link>
           </Typography>
         </li>
         <li>
           <Typography type="H5" className="menu-font text-black">
-            Contact Us
+            <Link to="clients" className="nav-link">Clients</Link>
+          </Typography>
+        </li>
+        <li>
+          <Typography type="H5" className="menu-font text-black">
+            <Link to="our-blogs" className="nav-link">Our Blogs</Link>
+          </Typography>
+        </li>
+        <li>
+          <Typography type="H5" className="menu-font text-black">
+            <Link to="contact-us" className="nav-link"> Contact Us</Link>
           </Typography>
         </li>
       </ul>

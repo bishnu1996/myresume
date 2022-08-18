@@ -1,5 +1,6 @@
 import React from "react";
 import { Formik } from "formik";
+import { Link } from "react-router-dom";
 import { registerUser } from "../../Apis";
 import styles from "./style.module.css";
 import { setStorageData,USER_DATA } from "../../services/storage";
@@ -37,15 +38,16 @@ const Register = () => {
     return errors;
   };
   const onSubmit = async (values, { setSubmitting }) => {
-    console.log("hello registered");
+    console.log("hello registered",values);
     const response = await registerUser(values);
-    // console.log("response", response);
+    console.log("response", response);
     // console.log(USER_DATA,response);
+    console.log(response.status.error);
     if (!response.status.error) {
       console.log(USER_DATA,response.status.message);
       toastSuccess(response.status.message);
       setStorageData(USER_DATA, response.data);
-      // console.log(USER_DATA,response.data);
+      console.log(USER_DATA,response.data);
     } else {
       toastError(response.status.message);
     }
@@ -137,6 +139,7 @@ const myForm = (props) => {
         <button type="submit" disabled={isSubmitting}>
           Submit
         </button>
+        <Link to="/login"></Link>
       </form>
     </div>
     </div>

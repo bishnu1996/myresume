@@ -15,7 +15,7 @@ import Footer from "../../components/Footer";
 function Homepage() {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <Poster />
       <AboutUs/>
       <OurExperience/>
@@ -27,7 +27,7 @@ function Homepage() {
       <ContactImageForm />
       <Map />
       <SecurityTag/>
-      <Footer/>
+      {/* <Footer/> */}
     </>
   );
 }
