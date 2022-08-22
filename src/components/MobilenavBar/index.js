@@ -1,5 +1,5 @@
 import Typography from '../Typography';
-
+import { Link } from 'react-router-dom';
 import './style.css';
 
 const MobileNavbar = () => {
@@ -8,37 +8,37 @@ const MobileNavbar = () => {
       <ul>
         <li>
           <Typography type='H5' className='menu-font text-black'>
-            Home
+           <Link to='/'> Home</Link>
           </Typography>
         </li>
 
         <li>
           <Typography type='H5' className='menu-font text-black'>
-            About Us
+            <Link to='about-us'>About Us</Link>
           </Typography>
         </li>
 
         <li>
           <Typography type='H5' className='menu-font text-black'>
-            Our Work
+          <Link to='our-work'> Our Work</Link> 
           </Typography>
         </li>
 
         <li>
           <Typography type='H5' className='menu-font text-black'>
-            Clients
+           <Link to='clients'> Clients</Link>
           </Typography>
         </li>
 
         <li>
           <Typography type='H5' className='menu-font text-black'>
-            Our Blog
+            <Link to='our-blogs'>Our Blog</Link>
           </Typography>
         </li>
 
         <li>
           <Typography type='H5' className='menu-font text-black'>
-            Contact Us
+          <Link to='contact-us'>Contact Us</Link> 
           </Typography>
         </li>
       </ul>

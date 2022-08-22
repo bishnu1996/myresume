@@ -37,6 +37,13 @@ const DesktopNavbar = (props) => {
           <Typography type="H5" className="menu-font text-black">
             <Link to="contact-us" className="nav-link"> Contact Us</Link>
           </Typography>
+          <Typography type="H5" className="menu-font text-black">
+            <Link to="login" className="nav-link"> Login</Link>
+          </Typography>
+          <Typography type="H5" className="menu-font text-black">
+            <Link to="register" className="nav-link"> signup</Link>
+          </Typography>
+          
         </li>
       </ul>
     </nav>

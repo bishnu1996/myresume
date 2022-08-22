@@ -16,8 +16,8 @@ const later = (value) =>
 let USER_DATA = [
   {
     username:'bishnu mishra',
-    email: 'ramvishvas.kumar@primathon.in',
-    password: '123456',
+    email: 'anuj@gmail.com',
+    password: '1234',
     id: generateId(),
     token: generateToken(),
   },
@@ -113,6 +113,82 @@ export const loginUser = async (payload) => {
         data: null,
       };
     }
+  }
+
+  try {
+    return await later(responsePayload);
+  } catch (error) {
+    console.error(error);
+    return responsePayload;
+  }
+};
+
+
+export const logoutUser = async (payload) => {
+  let responsePayload;
+
+  const user = USER_DATA.find((user) => user.token === payload.token);
+
+  if (!user || payload.token === user.token) {
+    responsePayload = {
+      status: {
+        type: 'error',
+        code: 401,
+        message: 'Failed to logout. Invalid token',
+        error: true,
+      },
+      data: null,
+    };
+  } else {
+    responsePayload = {
+      status: {
+        type: 'success',
+        code: 200,
+        message: 'Logout Successful',
+        error: false,
+      },
+      data: null,
+    };
+  }
+  try {
+    return await later(responsePayload);
+  } catch (error) {
+    console.error(error);
+    return responsePayload;
+  }
+};
+
+export const resetUserPassword = async (payload) => {
+  const user = USER_DATA.find((user) => user.email === payload.email);
+
+  let responsePayload;
+
+  if (!user || payload.email !== user.email) {
+    responsePayload = {
+      status: {
+        type: 'error',
+        code: 404,
+        message: 'User does not exist',
+        error: true,
+      },
+      data: null,
+    };
+  } else {
+    responsePayload = {
+      status: {
+        type: 'success',
+        code: 200,
+        message: 'Reset Successful',
+        error: false,
+      },
+      data: {
+        username:user.username,
+        email: user.email,
+        password: user.password,
+        id: user.id,
+        token: user.token,
+      },
+    };
   }
 
   try {

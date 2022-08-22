@@ -3,8 +3,9 @@ import AppImage from "../AppImage";
 import DesktopNavbar from "../DesktopNavbar";
 import MobileNavbar from "../MobilenavBar";
 import AppModal from "../AppModal";
-
+import  Logout  from "../../pages/Logout";
 import "./style.css";
+
 
 // Make sure to bind modal to your appElement (https://reactcommunity.org/react-modal/accessibility/)
 
@@ -28,6 +29,7 @@ function Header() {
         </div>
         <DesktopNavbar className="desktp-nav" />
         <div>
+          <Logout />
           <AppImage
             src={`${process.env.PUBLIC_URL}/assets/svgs/light.svg`}
             alt="light"

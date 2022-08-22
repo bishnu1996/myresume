@@ -5,7 +5,14 @@ import { registerUser } from "../../Apis";
 import styles from "./style.module.css";
 import { setStorageData,USER_DATA } from "../../services/storage";
 import { toastSuccess,toastError } from "../../services/toastify";
+import { useNavigate } from "react-router-dom";
 const Register = () => {
+
+  let naviagte = useNavigate();
+
+  const gotoHome = ()=>{
+    naviagte('/');
+  }
   const initialValues = {
     email: "",
     password: "",
@@ -47,10 +54,12 @@ const Register = () => {
       console.log(USER_DATA,response.status.message);
       toastSuccess(response.status.message);
       setStorageData(USER_DATA, response.data);
+      gotoHome();
       console.log(USER_DATA,response.data);
     } else {
       toastError(response.status.message);
     }
+    setSubmitting(false);
   };
   return (
     <div>
@@ -61,6 +70,7 @@ const Register = () => {
       >
         {myForm}
       </Formik>
+     
     </div>
   );
 };
@@ -139,7 +149,10 @@ const myForm = (props) => {
         <button type="submit" disabled={isSubmitting}>
           Submit
         </button>
-        <Link to="/login"></Link>
+        <div>
+            Already registered?<Link to='/login'>Click Here</Link>
+        </div>
+      
       </form>
     </div>
     </div>

@@ -1,6 +1,7 @@
 import styles from './style.module.css';
 import React from "react";
 import { Formik } from "formik";
+import { Link } from 'react-router-dom';
 import { loginUser } from "../../Apis";
 import { toastSuccess,toastError } from '../../services/toastify' 
 import { USER_DATA } from '../../services/storage';
@@ -52,7 +53,9 @@ const Login = () => {
             onSubmit={onSubmit}
           >
             {myForm}
+           
           </Formik>
+          
         </div>
       );
     };
@@ -100,6 +103,13 @@ const Login = () => {
             <button type="submit" disabled={isSubmitting}>
               Submit
             </button>
+            <div>
+              <Link to='/forget-pass'>Reset Password</Link>
+            </div>
+            <div>
+              Not registered ? <Link to='/register'>Click Here</Link>
+            </div>
+            
           </form>
         </div>
         </div>
